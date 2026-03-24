@@ -23,7 +23,7 @@ The paper specifies the retention contract (invariants, schema, recoverability c
 | File | Description |
 |------|-------------|
 | `strategic-forgetting-final.pdf` | Paginated PDF (25 pages, TeX Gyre Heros) |
-| `strategic-forgetting.html` | Continuous-scroll HTML with floating TOC and embedded figures |
+| [`strategic-forgetting.html`](https://hip1.github.io/Strategic-Forgetting/strategic-forgetting.html) | Continuous-scroll HTML with floating TOC and embedded figures |
 | `strategic-forgetting-final.md` | Canonical markdown source |
 
 The PDF and HTML are both suitable for reading. The PDF is the archival format for citation tools and indexers. The HTML is the better reading experience for practitioners.
