@@ -1,0 +1,50 @@
+cff-version: 1.2.0
+message: "If you use or reference this work, please cite it as below."
+title: "Strategic Forgetting: Ephemeral Retrieval and Tiered Context Persistence for LLM Inference"
+type: report
+authors:
+  - family-names: Phan
+    given-names: Ivan
+    alias: HiP
+    orcid: "https://orcid.org/0009-0003-1095-5855"
+date-released: "2026-03-17"
+doi: "10.5281/zenodo.19200814"
+url: "https://doi.org/10.5281/zenodo.19200814"
+license: CC-BY-4.0
+abstract: >-
+  Tool-augmented LLM sessions accumulate retrieved content that actively
+  degrades the model's ability to attend to relevant material, not merely
+  wasting context capacity but reducing output quality through documented
+  attention degradation. This concept note proposes a tiered retention
+  architecture with three modes (full, summary, ephemeral), four
+  recoverability classes, user-settable priority, and a retention note
+  schema that makes every compression decision inspectable. The security
+  analysis identifies semantic cache poisoning as a specific risk when
+  summarisation is performed on untrusted content. The paper specifies
+  the retention contract; calibrating defaults by content type, task type,
+  and user profile is a platform-level product decision.
+keywords:
+  - context management
+  - LLM inference
+  - tiered retention
+  - ephemeral retrieval
+  - context window
+  - tool-augmented AI
+  - prompt injection
+  - semantic cache poisoning
+  - inspectability
+  - AI safety
+  - summarisation security
+  - retention architecture
+references:
+  - type: article
+    title: "The Confidence Vulnerability: Unstable Judgment in Language Model Summarisation"
+    authors:
+      - family-names: Phan
+        given-names: Ivan
+        alias: HiP
+        orcid: "https://orcid.org/0009-0003-1095-5855"
+    doi: "10.5281/zenodo.19199055"
+    year: 2026
+    collection-title: "The Confidence Curriculum"
+    notes: "Paper 1 of 5. Cited in Section 5.1 for empirical evidence on summariser vulnerability."
