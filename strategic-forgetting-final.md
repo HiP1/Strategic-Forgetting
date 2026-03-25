@@ -6,7 +6,7 @@
 
 *Concept Note · March 2026*
 
-*doi:10.5281/zenodo.19200814*
+*doi:10.5281/zenodo.19212126*
 
 *Developed through adversarial multi-model collaboration: Claude/Weaver (generative collaborator), ChatGPT/Surgeon (structural critique), Gemini/Alchemist (mechanism critique), HiP (editorial authority).*
 

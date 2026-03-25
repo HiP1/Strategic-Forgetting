@@ -4,7 +4,7 @@
 
 HiP (Ivan Phan) · [ORCID: 0009-0003-1095-5855](https://orcid.org/0009-0003-1095-5855)
 
-Concept Note · March 2026 · doi:[10.5281/zenodo.19200814](https://doi.org/10.5281/zenodo.19200814)
+Concept Note · March 2026 · doi:[10.5281/zenodo.19212126](https://doi.org/10.5281/zenodo.19212126)
 
 ---
 
@@ -32,7 +32,7 @@ The PDF and HTML are both suitable for reading. The PDF is the archival format f
 
 See [CITATION.cff](CITATION.cff) for machine-readable citation metadata, or use:
 
-> Phan, I. (2026). Strategic Forgetting: Ephemeral Retrieval and Tiered Context Persistence for LLM Inference. Concept note. doi:10.5281/zenodo.19200814.
+> Phan, I. (2026). Strategic Forgetting: Ephemeral Retrieval and Tiered Context Persistence for LLM Inference. Concept note. doi:10.5281/zenodo.19212126.
 
 BibTeX:
 
@@ -42,8 +42,8 @@ BibTeX:
   title        = {Strategic Forgetting: Ephemeral Retrieval and Tiered Context Persistence for {LLM} Inference},
   year         = {2026},
   month        = {3},
-  doi          = {10.5281/zenodo.19200814},
-  url          = {https://doi.org/10.5281/zenodo.19200814},
+  doi          = {10.5281/zenodo.19212126},
+  url          = {https://doi.org/10.5281/zenodo.19212126},
   note         = {Concept note}
 }
 ```

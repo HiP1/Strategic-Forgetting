@@ -8,8 +8,8 @@ authors:
     alias: HiP
     orcid: "https://orcid.org/0009-0003-1095-5855"
 date-released: "2026-03-17"
-doi: "10.5281/zenodo.19200814"
-url: "https://doi.org/10.5281/zenodo.19200814"
+doi: "10.5281/zenodo.19212126"
+url: "https://doi.org/10.5281/zenodo.19212126"
 license: CC-BY-4.0
 abstract: >-
   Tool-augmented LLM sessions accumulate retrieved content that actively
