@@ -197,6 +197,9 @@ body { font-family: var(--font-body); color: var(--text); background: var(--bg);
     
     
     
+    
+    
+    
     <li><a href="#abstract" onclick="closeToc()">Abstract</a></li>
 <li><a href="#the-problem-context-window-as-undifferentiated-accumulator" onclick="closeToc()">1.
 The Problem: Context Window as Undifferentiated Accumulator</a></li>
@@ -216,6 +219,9 @@ Implementation Feasibility</a></li>
 Directions</a></li>
 <li><a href="#conclusion" onclick="closeToc()">Conclusion</a></li>
 <li><a href="#references" onclick="closeToc()">References</a></li>
+  
+  
+  
   
   
   
@@ -327,6 +333,19 @@ budget that every additional token depletes (Anthropic, 2025).</p>
 passengers. They consume capacity and degrade the model’s ability to
 attend to the content that matters. Removing them is not just a cost
 optimisation. It is a quality preservation measure.</p>
+<p>The positional dimension sharpens this further. In a typical
+tool-augmented session, the context begins with the system prompt
+followed by the earliest tool results. These early retrieval artefacts
+occupy the high-attention prefix zone where the model pays the most
+attention (Hsieh et al., 2024). By mid-session, those results are the
+least relevant content in the context, yet they sit in the position
+where they receive the most attention. Meanwhile, the user’s current
+question and latest tool results are at the opposite edge. Flushing
+stale early-turn content and replacing it with compact retention notes
+does not just reduce total token count. It frees the high-attention
+prefix for content that should anchor reasoning. The quality improvement
+is disproportionately concentrated where the model is already paying the
+most attention.</p>
 <p>The scope of this proposal is deliberately narrow. We focus
 specifically on retrieved and tool-produced external content: search
 results, fetched documents, API responses, database query results. These
@@ -980,7 +999,10 @@ increases (Hong et al., 2025), and information in the middle of long
 contexts receives systematically less attention (Liu et al., 2024).
 Removing stale content reduces total input length and increases the
 proportion of remaining content that is relevant. Both effects work in
-the same direction.</p>
+the same direction. As noted in Section 1, the improvement is
+disproportionately concentrated at the prefix, where stale early-turn
+tool results currently occupy the position where the model pays the most
+attention.</p>
 <p>The failure mode where stale tool results from early turns
 contaminate later reasoning is substantially reduced, though not fully
 eliminated. Summaries can still carry forward inaccuracies or omissions
@@ -1030,6 +1052,16 @@ stale tool results as the primary source of context waste, both draw on
 the virtual memory / cache hierarchy analogy, and both propose eviction
 with recovery mechanisms. Pichay provides empirical production evidence
 that this proposal lacks.</p>
+<p>The most fundamental difference is audience. Pichay targets
+developers using agent frameworks and coding clients. The eviction
+mechanism is invisible to the end user by design; the developer
+configures the proxy. This proposal targets chat platforms where the end
+user is a person, not a developer’s orchestration script. The
+user-facing controls (pin, inspect, override, priority), the inspectable
+scratchpad, and the content-type defaults all exist because the person
+using the system needs to understand and influence what the model
+remembers. This audience difference drives the design divergence more
+than any technical distinction.</p>
 <p>There are two relevant differences in architecture and evidence.</p>
 <p><strong>Control plane.</strong> Pichay’s mechanism depends entirely
 on model compliance. The proxy injects phantom tool definitions and
@@ -1188,8 +1220,11 @@ capacity does not necessarily scale with it.</p>
 multiplicatively enhanced by intelligent retention. A smaller window
 with tiered persistence may sustain longer effective sessions than a
 larger window without it, because it maintains signal-to-noise ratio
-while the larger window fills with debris. The question is
-straightforward: who builds it first?</p>
+while the larger window fills with debris. Tiered persistence does not
+just shrink the window. It reshapes the attention distribution by
+removing low-value content from the high-attention positions where it
+does the most damage. The question is straightforward: who builds it
+first?</p>
 <hr />
 <h2 id="evaluation-and-implementation-feasibility">8. Evaluation and
 Implementation Feasibility</h2>
