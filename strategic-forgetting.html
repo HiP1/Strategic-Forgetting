@@ -199,6 +199,7 @@ body { font-family: var(--font-body); color: var(--text); background: var(--bg);
     
     
     
+    
     <li><a href="#abstract" onclick="closeToc()">Abstract</a></li>
 <li><a href="#the-problem-context-window-as-undifferentiated-accumulator" onclick="closeToc()">1.
 The Problem: Context Window as Undifferentiated Accumulator</a></li>
@@ -218,6 +219,7 @@ Implementation Feasibility</a></li>
 Directions</a></li>
 <li><a href="#conclusion" onclick="closeToc()">Conclusion</a></li>
 <li><a href="#references" onclick="closeToc()">References</a></li>
+  
   
   
   
@@ -1050,6 +1052,16 @@ stale tool results as the primary source of context waste, both draw on
 the virtual memory / cache hierarchy analogy, and both propose eviction
 with recovery mechanisms. Pichay provides empirical production evidence
 that this proposal lacks.</p>
+<p>The most fundamental difference is audience. Pichay targets
+developers using agent frameworks and coding clients. The eviction
+mechanism is invisible to the end user by design; the developer
+configures the proxy. This proposal targets chat platforms where the end
+user is a person, not a developer’s orchestration script. The
+user-facing controls (pin, inspect, override, priority), the inspectable
+scratchpad, and the content-type defaults all exist because the person
+using the system needs to understand and influence what the model
+remembers. This audience difference drives the design divergence more
+than any technical distinction.</p>
 <p>There are two relevant differences in architecture and evidence.</p>
 <p><strong>Control plane.</strong> Pichay’s mechanism depends entirely
 on model compliance. The proxy injects phantom tool definitions and
