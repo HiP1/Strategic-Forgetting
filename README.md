@@ -14,7 +14,7 @@ Tool-augmented LLM sessions accumulate retrieved content (search results, API re
 
 This concept note proposes a tiered retention architecture with three modes (full, summary, ephemeral), four recoverability classes, and a retention note schema that makes every compression decision inspectable by the user. The user can see what is retained, pin content that matters, set priority, and trigger re-retrieval of anything that was flushed.
 
-The security analysis identifies semantic cache poisoning as a specific risk when summarisation is performed on untrusted content, drawing on cross-model empirical findings from [The Confidence Curriculum](https://hip1.github.io/confidence-curriculum/0-the-confidence-curriculum-series-introduction.html) series (Phan, 2026). The proposal's core value does not depend on summarisation being secure: even without it, the metadata layer (turn numbers, content types, source pointers) provides inspectability that does not exist today.
+The security analysis identifies semantic cache poisoning as a specific risk when summarisation is performed on untrusted content, drawing on cross-model empirical findings from [The Confidence Curriculum](https://doi.org/10.5281/zenodo.19365459) series (Phan, 2026). The proposal's core value does not depend on summarisation being secure: even without it, the metadata layer (turn numbers, content types, source pointers) provides inspectability that does not exist today.
 
 The paper specifies the retention contract (invariants, schema, recoverability constraints). It does not prescribe a single default policy. Calibrating defaults by content type, task type, domain, and user profile is a platform-level product decision and a natural site of competitive differentiation.
 
@@ -23,7 +23,7 @@ The paper specifies the retention contract (invariants, schema, recoverability c
 | File | Description |
 |------|-------------|
 | `strategic-forgetting-final.pdf` | Paginated PDF (25 pages, TeX Gyre Heros) |
-| [`strategic-forgetting.html`](https://hip1.github.io/Strategic-Forgetting/strategic-forgetting.html) | Continuous-scroll HTML with floating TOC and embedded figures |
+| `strategic-forgetting.html` | Continuous-scroll HTML with floating TOC and embedded figures |
 | `strategic-forgetting-final.md` | Canonical markdown source |
 
 The PDF and HTML are both suitable for reading. The PDF is the archival format for citation tools and indexers. The HTML is the better reading experience for practitioners.
@@ -50,7 +50,7 @@ BibTeX:
 
 ## Related work
 
-This paper cites [The Confidence Vulnerability](https://hip1.github.io/confidence-curriculum/1-the-confidence-vulnerability.html) (Paper 1 of The Confidence Curriculum series) for empirical evidence on summariser vulnerability to indirect prompt injection.
+This paper cites [The Confidence Vulnerability](https://doi.org/10.5281/zenodo.19365459) (Paper 1 of The Confidence Curriculum series) for empirical evidence on summariser vulnerability to indirect prompt injection.
 
 The paper is independent of The Confidence Curriculum series but shares an author.
 

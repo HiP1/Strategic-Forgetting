@@ -532,7 +532,7 @@ OWASP (2025). LLM01:2025 Prompt Injection. *OWASP Top 10 for LLM Applications*. 
 
 Packer, C., Wooders, S., Lin, K., Fang, V., Patil, S. G., Stoica, I., & Gonzalez, J. E. (2023). MemGPT: Towards LLMs as Operating Systems. arXiv:2310.08560.
 
-Phan, I. (2026). The Confidence Vulnerability: Unstable Judgment in Language Model Summarisation. *The Confidence Curriculum* series, Paper 1 of 5. doi:10.5281/zenodo.19199055.
+Phan, I. (2026). The Confidence Vulnerability: Unstable Judgment in Language Model Summarisation. *The Confidence Curriculum* series, Paper 1 of 5. doi:10.5281/zenodo.19365459.
 
 Santoni, C. (2026). Contextual Memory Virtualisation: DAG-Based State Management and Structurally Lossless Trimming for LLM Agents. arXiv:2602.22402.
 
